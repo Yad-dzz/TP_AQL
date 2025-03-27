@@ -1,18 +1,22 @@
 package org.example;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class StackTest {
+    private Stack stack;
+    @BeforeEach
+    void intialize(){
+         this.stack = new Stack();
+    }
     @Test
     void testPushAndPeek() {
-        Stack stack = new Stack();
         stack.push(10);
         assertEquals(10, stack.peek());
     }
 
     @Test
     void testPop() {
-        Stack stack = new Stack();
         stack.push(20);
         assertEquals(20, stack.pop());
         assertTrue(stack.isEmpty());
@@ -20,7 +24,6 @@ class StackTest {
 
     @Test
     void testIsEmpty() {
-        Stack stack = new Stack();
         assertTrue(stack.isEmpty());
         stack.push(30);
         assertFalse(stack.isEmpty());
@@ -28,7 +31,6 @@ class StackTest {
 
     @Test
     void testSize() {
-        Stack stack = new Stack();
         stack.push(5);
         stack.push(15);
         assertEquals(2, stack.size());
@@ -36,7 +38,40 @@ class StackTest {
 
     @Test
     void testPopThrowsExceptionWhenEmpty() {
-        Stack stack = new Stack();
-        assertThrows(IllegalStateException.class, stack::pop);
+        assertThrows(IllegalStateException.class, ()-> stack.pop());
     }
+    @Test
+    void testPeekThrowsExceptionWhenEmpty() {
+        assertThrows(IllegalStateException.class, () -> stack.peek());
+    }
+    @Test
+    void testPushMultipleElements() {
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        assertEquals(3, stack.peek());
+    }
+
+    @Test
+    void testPopMultipleElements() {
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        assertAll(() -> assertEquals(3, stack.pop()),
+                () -> assertEquals(2, stack.pop()),
+                () -> assertEquals(1, stack.pop()),
+                () -> assertTrue(stack.isEmpty())
+        );
+    }
+
+    @Test
+    void testSizeAfterOperations() {
+        stack.push(10);
+        stack.push(20);
+        stack.pop();
+        assertEquals(1, stack.size());
+        stack.pop();
+        assertEquals(0, stack.size());
+    }
+
 }
