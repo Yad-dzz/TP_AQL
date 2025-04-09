@@ -20,7 +20,7 @@ public class PrimeTest {
     // --- Small primes ---
     @Test
     public void testIsPrime_SmallPrimes_ReturnsTrue() {
-        assertTrue(Prime.isPrime(2));  // Smallest prime
+        assertTrue(Prime.isPrime(2));
         assertTrue(Prime.isPrime(3));
         assertTrue(Prime.isPrime(5));
         assertTrue(Prime.isPrime(7));
@@ -38,21 +38,21 @@ public class PrimeTest {
     // --- Large primes ---
     @Test
     public void testIsPrime_LargePrimes_ReturnsTrue() {
-        assertTrue(Prime.isPrime(997));    // Largest 3-digit prime
-        assertTrue(Prime.isPrime(7919));   // Known large prime
+        assertTrue(Prime.isPrime(997));
+        assertTrue(Prime.isPrime(7919));
     }
 
     // --- Large non-primes ---
     @Test
     public void testIsPrime_LargeNonPrimes_ReturnsFalse() {
         assertFalse(Prime.isPrime(1000));
-        assertFalse(Prime.isPrime(7920));  // 7920 = 7919 + 1 (next number after a prime)
+        assertFalse(Prime.isPrime(7920));
     }
 
     // --- Boundary cases ---
     @Test
     public void testIsPrime_MaxInt_ReturnsFalse() {
-        assertFalse(Prime.isPrime(Integer.MAX_VALUE - 1));  // MAX_INT is a Mersenne prime (2^31-1)
-        // Note: Integer.MAX_VALUE is actually prime, but the naïve algo may timeout.
+        assertFalse(Prime.isPrime(Integer.MAX_VALUE - 1));
+        //  Integer.MAX_VALUE is actually prime, but the naïve algo may timeout.
     }
 }
