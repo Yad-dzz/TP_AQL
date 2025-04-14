@@ -1,6 +1,9 @@
-package org.example;
+package org.example.tp0;
+
+import org.example.Stack;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class StackTest {

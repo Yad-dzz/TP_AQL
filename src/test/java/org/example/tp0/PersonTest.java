@@ -1,7 +1,7 @@
-package org.example;
+package org.example.tp0;
 
+import org.example.Person;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.function.Executable;
 
 import static org.junit.jupiter.api.Assertions.*;
 

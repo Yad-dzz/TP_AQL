@@ -1,6 +1,11 @@
-package org.example;
+package org.example.tp0;
+
+import org.example.Fibonacci;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 public class FibonacciTest {
     @Test
     public void testFibonacci_NegativeInput_ThrowsException() {

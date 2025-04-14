@@ -1,0 +1,1 @@
+le problem est dans i <= s1.length(), ce qui provoque une erreur d’index hors limites (StringIndexOutOfBoundsException) parce que les indices des chaînes vont de 0 à s1.length() - 1

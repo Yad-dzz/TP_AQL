@@ -1,6 +1,7 @@
-package org.example;
+package org.example.tp0;
 
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 

@@ -1,6 +1,10 @@
-package org.example;
+package org.example.tp0;
+
+import org.example.Prime;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class PrimeTest {
 
