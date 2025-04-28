@@ -1,4 +1,4 @@
-package org.example.tp2;
+package org.example.tp2.calculatrice;
 
 import org.example.tp2.model.Calculatrice;
 import org.junit.Test; // ✅ JUnit, pas TestNG

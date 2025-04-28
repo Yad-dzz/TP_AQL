@@ -1,4 +1,4 @@
-package org.example.tp2;
+package org.example.tp2.userserrvice;
 
 import org.example.tp2.service.ServiceException;
 import org.example.tp2.service.UserService;
