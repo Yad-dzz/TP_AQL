@@ -1,4 +1,4 @@
-package org.example.tp3;
+package org.example.tp3.user;
 
 import org.example.tp3.user.User;
 import org.example.tp3.user.UserRepository;

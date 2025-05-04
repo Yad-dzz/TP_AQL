@@ -1,4 +1,5 @@
 package org.example.tp3.product;
 
-public class ProductApiClient {
+public interface ProductApiClient {
+    Product getProduct(String productId) throws ProductApiException;
 }
